@@ -20,6 +20,11 @@ public class RestuarentController {
 	@Autowired
 	MenuRepository menuRepository;
 	
+	@RequestMapping("/test")
+	public String test() {
+		return "Organic Spring Boot App is Running here";	
+	}
+	
 	@RequestMapping("/getAllMenuItems")
 	public List<MenuItem> getAllMenuItems() {
 		return menuRepository.findAll();		
